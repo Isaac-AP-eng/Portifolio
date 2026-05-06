@@ -1,8 +1,202 @@
 body {
-    background-color: gray;
+  display: grid;
+  place-items: center; /* Comando "mágico" que centraliza nos dois eixos */
+  min-height: 100vh;   /* Garante que o corpo da página ocupe a tela toda */
+  margin: 0;
+  text-align: center; /* Centraliza o texto e elementos inline */
+  background: url('/imagens/fundo.jpg') center/cover fixed;
+  background-color: #1a1a2e;
+  color: #e0e0e0;
+  font-family: 'Courier New', Courier, monospace;
 }
-img{
-    border-radius: 50% ;
-    width:100px ;
-    height:150px ;
+
+.wrapper {
+  width: 100%;
+  max-width: 700px;
+  margin: 32px 0;
+  padding: 16px;
+  box-sizing: border-box;
+  background: rgba(20, 20, 40, 0.92);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 2px solid #8b5cf6;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7), 0 0 30px rgba(139, 92, 246, 0.3);
+}
+
+.navegação ul{
+    list-style-type:none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    background: rgba(30, 30, 60, 0.95);
+    justify-content: center; /* Centraliza os itens do menu */
+    place-items: center;
+    width: 100%;
+    border: 3px solid #00d9ff;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.5), inset 0 0 10px rgba(0, 217, 255, 0.1);
+}
+
+.navegação a{
+    display:block;
+    color: #00d9ff;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    transition: all 0.3s ease;
+}
+
+.navegação a:hover {
+  background-color: rgba(139, 92, 246, 0.5);
+  color: #8b5cf6;
+  box-shadow: inset 0 0 10px rgba(139, 92, 246, 0.3);
+}
+
+/* Centralizar a imagem */
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 12px 0;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.intro-text {
+  flex: 0 1 auto;
+  text-align: left;
+}
+
+.intro-text h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  font-family: 'Courier New', Courier, monospace;
+  color: #8b5cf6;
+}
+
+.intro-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.intro-media img {
+  display: block;
+  margin: 0;
+  max-height: 200px;
+  width: auto;
+  border-radius: 50%;
+  border: 4px solid #00d9ff;
+  box-sizing: border-box;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.social-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links li img {
+  width: 48px;
+  height: 48px;
+  border-radius: 0;
+  background-color: #ffffff;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.social-links li:nth-child(1) img {
+  border-radius: 14px;
+}
+
+.social-links li:nth-child(2) img,
+.social-links li:nth-child(3) img {
+  border-radius: 50%;
+}
+
+.social-links li img:hover {
+  transform: scale(1.2);
+  background-color: #e0e0e0;
+}
+
+/* Centralizar a lista de redes sociais */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espaçamento entre os links */
+}
+
+ul li a {
+  color: #00d9ff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+ul li a:hover {
+  color: #8b5cf6;
+}
+
+/* Estilos para a biografia */
+.biografia {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Espaçamento entre as seções */
+  flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+  width: 100%;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 30px;
+}
+
+.sobre, .trajetoria, .certificados {
+  flex: 1 1 200px;
+  max-width: 300px; /* Largura máxima para cada seção */
+  text-align: left; /* Alinha o texto à esquerda dentro das seções */
+  background: rgba(30, 30, 60, 0.9);
+  padding: 15px;
+  border: 2px solid #00d9ff;
+  border-radius: 5px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.3), inset 0 0 10px rgba(0, 217, 255, 0.1);
+  color: #e0e0e0;
+}
+
+.sobre h2, .trajetoria h2, .certificados h2 {
+  color: #8b5cf6;
+  margin-top: 0;
+}
+
+.biografia a {
+  color: #00d9ff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.biografia a:hover {
+  color: #8b5cf6;
+}
+
+/* Centralizar o footer */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #00d9ff;
+  color: #00d9ff;
 }
