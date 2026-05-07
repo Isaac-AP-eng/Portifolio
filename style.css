@@ -4,7 +4,7 @@ body {
   min-height: 100vh;   /* Garante que o corpo da página ocupe a tela toda */
   margin: 0;
   text-align: center; /* Centraliza o texto e elementos inline */
-  background: url('/imagens/fundo.jpg') center/cover fixed;
+  background: url('imagens/fundo.jpg') center/cover fixed;
   background-color: #1a1a2e;
   color: #e0e0e0;
   font-family: 'Courier New', Courier, monospace;
